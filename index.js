@@ -5,9 +5,10 @@ const middlewares = jsonServer.defaults()
 var secure = require('ssl-express-www');
 
 
-server.use(secure);
+
 
 server.use(middlewares)
+server.use(secure);
 server.use(router)
 server.listen(process.env.PORT || 3000, function() {
     console.log("listening on 3000");
