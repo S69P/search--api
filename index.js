@@ -2,6 +2,10 @@ const jsonServer = require('json-server')
 const server = jsonServer.create()
 const router = jsonServer.router('db.json')
 const middlewares = jsonServer.defaults()
+var secure = require('ssl-express-www');
+
+
+server.use(secure);
 
 server.use(middlewares)
 server.use(router)
