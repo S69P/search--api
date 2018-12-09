@@ -11,6 +11,6 @@ server.use(middlewares)
 // server.use(secure);
 //server.use(enforce.HTTPS());
 server.use(router)
-server.listen(process.env.PORT || 3000, function() {
-    console.log("listening on 3000");
+server.listen(process.env.PORT || 8080, function() {
+    console.log("listening on 8080");
   });
